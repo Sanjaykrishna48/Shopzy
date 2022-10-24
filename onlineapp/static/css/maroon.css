@@ -1,0 +1,25 @@
+/* Theme Name: Moltus - Business Template
+   Author:Harry
+   Author e-mail: harrynworld@gmail.com
+   Version: 1.0.0
+   Created:January 2015
+   File Description: Color-maroon css file
+*/
+
+a:hover,a:focus,a:active,.social-icons i:hover,.twitter_tweet i,.twitter_tweet p,#ajaxsuccess,
+.navbar-custom .navbar-nav>.active>a, .navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus,
+.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus,
+.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus,
+.navbar-custom .navbar-nav>li>a:hover,
+.md-content h5 {
+	color: #a06081;
+}
+.btn-custom,.btn-custom-sm,.back-to-top{
+	background-color: #a06081;
+}
+.form-control:focus,.btn-custom,.btn-custom-sm {
+	border-color: #a06081;
+}
+.titleHR span {
+	background: none repeat scroll 0 0 #a06081; 
+}

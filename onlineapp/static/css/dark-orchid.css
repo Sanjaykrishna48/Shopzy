@@ -1,0 +1,25 @@
+/* Theme Name: Moltus - Business Template
+   Author:Harry
+   Author e-mail: harrynworld@gmail.com
+   Version: 1.0.0
+   Created:January 2015
+   File Description: Color-dark-orchid css file
+*/
+
+a:hover,a:focus,a:active,.social-icons i:hover,.twitter_tweet i,.twitter_tweet p,#ajaxsuccess,
+.navbar-custom .navbar-nav>.active>a, .navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus,
+.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus,
+.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus,
+.navbar-custom .navbar-nav>li>a:hover,
+.md-content h5 {
+	color: #9932cc;
+}
+.btn-custom,.btn-custom-sm,.back-to-top{
+	background-color: #9932cc;
+}
+.form-control:focus,.btn-custom,.btn-custom-sm {
+	border-color: #9932cc;
+}
+.titleHR span {
+	background: none repeat scroll 0 0 #9932cc; 
+}

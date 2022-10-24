@@ -1,0 +1,582 @@
+/*
+	Delex by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+
+/* TABLE OF CONTENTS
+	1) Reset
+	2) Help classes
+	3) Pre-loader
+	4) Parallax
+	5) Navigation
+	6) Home
+	7) Services
+	8) Twitter-tweets
+	9) Contact
+	10) Footer
+	11) Responsive
+	12) Back-to-top
+*/
+
+
+
+
+/* 1 Reset
+----------------------------------------------------------------------------- */
+
+html,body {
+  height: 100%;
+}
+body {
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 400;
+  color: #535353;
+}
+*,*:before,*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus {
+    outline: 0 !important
+}
+iframe {
+    border: none;
+    width:100%;
+}
+a {
+  color: inherit;
+}
+a:hover,a:focus,a:active {
+  text-decoration: none;
+}
+p {
+  color: #737373;
+}
+img {
+  max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Signika Negative', sans-serif;
+}
+textarea {
+  max-width: 100%;
+}
+.btn {
+  font-size: 14px;
+  font-family: 'Signika Negative', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.btn:focus,.btn:active:focus {
+  outline: none;
+  color: #ffffff;
+}
+.btn-custom,.btn-custom-sm{
+	border-radius: 3px;
+	padding: 0.8em 1.8em;
+	color: #fff;
+	font-weight: 700;
+	-webkit-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+	text-transform: uppercase;
+}
+.btn-custom:hover,.btn-custom:focus,.btn-custom-sm:hover,.btn-custom-sm:focus{
+  color: #fff;
+  background-color: #6C6767;
+  border-color: #6C6767;
+}
+.btn-custom-sm {
+	padding: 0.5em 1em;
+}
+.form-control {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0px;
+	height: 38px;
+}
+.form-control:focus {
+	outline: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.progress {
+	height: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: none;
+	border: 1px solid #bbb;
+}
+.progress-bar {
+	height: 6px;
+	box-shadow: none;
+	margin: 1px;
+	border-radius: 3px;
+}
+section {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+/* 2 Help-classes
+----------------------------------------------------------------------------- */
+.no-padding {
+	padding: 0px;
+}
+.color-l-orange {
+	color: #ff8b8b;
+}
+.color-l-blue {
+	color: #77afea;
+}
+.color-l-yellow {
+	color: #f4d382;
+}
+.color-l-purple {
+	color: #ad8ede;
+}
+.color-l-pink {
+	color: #ff3e75;
+}
+.color-l-green {
+	color: #77dfa2;
+}
+.bg-light-orange {
+	background-color: #ff8b8b;
+	color: #ffffff;
+}
+.bg-light-blue {
+	background-color: #77afea;
+	color: #ffffff;
+}
+.bg-light-yellow {
+	background-color: #f4d382;
+	color: #ffffff;
+}
+.bg-light-purple {
+	background-color: #ad8ede;
+	color: #ffffff;
+}
+.bg-light-pink {
+	background-color: #ff3e75;
+	color: #ffffff;
+}
+.bg-light-green {
+	background-color: #77dfa2;
+	color: #ffffff;
+}
+.title {
+	font-family: 'Kameron', serif;
+	font-weight: 700;
+}
+.titleHR {
+	background: none repeat scroll 0 0 #e1e1e1;
+	height: 3px;
+	margin: 20px auto 0;
+	position: relative;
+	text-align: center;
+	width: 130px;
+	margin-bottom: 20px;
+}
+.titleHR span {
+	border-left: 5px solid #f7f7f7;
+	border-right: 5px solid #f7f7f7;
+	display: inline-block;
+	height: 3px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	width: 50px;
+}
+
+/* 3 Pre-loader
+----------------------------------------------------------------------------- */
+.animationload {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; /* change if the mask should have another color then white */
+  z-index:999999;
+}
+.loader {
+    width:200px;
+    height:200px;
+    font-size: 24px;
+    text-align: center;
+    position:absolute;
+    left:50%; 
+    top:50%; 
+    background-image:url(../images/preloader.gif); 
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; 
+}
+
+
+/* 4 Parallax
+----------------------------------------------------------------------------- */
+.parallax {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* 5 Navigation
+----------------------------------------------------------------------------- */
+.navbar-custom {
+	background: transparent;
+	margin-bottom: 0px;
+	z-index: 1000;
+	border: none;
+	color: #333;
+	position: fixed;
+	transition: background-color 1s ease-in-out, border 1s ease-in-out;
+	-moz-transition: background-color 1s ease-in-out, border 1s ease-in-out;
+	-webkit-transition: background-color 1s ease-in-out, border 1s ease-in-out;
+	-o-transition: background-color 1s ease-in-out, border 1s ease-in-out;
+}
+.navbar-custom .navbar-brand,.navbar-custom .navbar-brand:hover {
+	color: #ffffff;
+	padding: 30px 15px;
+	font-size: 22px;
+	font-weight: 700;
+	font-family: 'Kameron', serif;
+}
+.small .navbar-brand,.small .navbar-brand:hover {
+	color: #333;
+}
+.navbar-custom .nav {
+	padding: 15px 0px;
+}
+.navbar-custom .navbar-nav>li>a {
+	color: #e3e3e3;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.small .navbar-nav>li>a {
+	color: #000;
+}
+nav.small {
+   background-color: #fff;
+   -moz-box-shadow: 0 3px 5px rgba(0,0,0,.1);
+   -webkit-box-shadow: 0 3px 5px rgba(0,0,0,.1);
+   box-shadow: 0 3px 5px rgba(0,0,0,.1);
+}
+.navbar-custom .navbar-nav>.active>a, .navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus,
+.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus,
+.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus {
+	background-color: transparent;
+}
+
+/* 6 Home
+----------------------------------------------------------------------------- */
+.main-home {
+	padding: 330px 0px 250px 0;
+	z-index: 1;
+	text-align: center;
+	position: relative;
+	font-size: 13px;
+	color: #fff;
+	background: #000;
+	min-height: 400px;
+}
+.home-page-photo {
+	background-image: url(../images/bg-5.jpg);
+	background-size: cover;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	opacity: 0.50;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.home__header-content {
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+}
+.home__header-content h1{
+	font-family: 'Kameron', serif;
+}
+.home__header-content p{
+	font-weight: 300;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.home__header-content a.btn-default {
+	margin-top: 15px;
+}
+/*--- Carousel --*/
+#main-home-carousel .intro-title {
+	font-family: 'Kameron', serif;
+}
+#main-home-carousel .intro-text {
+	color: #cacaca;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/* 7 Services
+----------------------------------------------------------------------------- */
+.services-item{
+	padding: 40px 20px;
+}
+.services-item i{
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+.services-item h5{
+	font-weight: 700;
+	font-size: 16px;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+/* 11 Twitter-tweets
+----------------------------------------------------------------------------- */
+#twitter_tweet {
+	background: url(../images/pattern1.png), url(../images/bg-4.jpg);
+}
+.twitter_tweet h5{
+    font-weight: 300;
+    line-height: 20px;
+    color: rgba(255,255,255,0.77);
+}
+.twitter_tweet i{
+    font-size: 30px;
+}
+
+
+/* 13 Contact
+----------------------------------------------------------------------------- */
+.form-main {
+	padding-top: 30px;
+}
+.error {
+	margin: 8px 0px;
+	display: none;
+	color: red;
+}
+#ajaxsuccess {
+	font-size: 16px;
+	width: 100%;
+	display: none;
+	clear: both;
+	margin: 8px 0px;
+}
+#contact .con_sub_text {
+	margin-top: 20px;
+}
+#contact textarea.form-control{
+	height: 120px;
+}
+
+/* 14 Footer
+----------------------------------------------------------------------------- */
+footer p{
+	margin-bottom: 20px;
+}
+#footer {
+	padding: 40px 0px 0px 0px;
+	background-color: #f7f7f7;
+    border-top: 1px solid #e4e4e4;
+}
+.footer-content {
+	padding: 40px 0px 80px;
+}
+.footer-bottom {
+	background-color: #000;
+	color: #a1a1a1;
+	padding: 20px 0px 1px;
+}
+.footer-socials {
+	position: relative;
+	margin: 47px 0px 20px 0px;
+	text-align: center;
+}
+.footer-socials a{
+	display: inline-block;
+}
+.footer-socials i {
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	background: transparent;
+	border: 2px solid #E7EBEF;
+	margin: 0px auto;
+	position: relative;
+	display: inline-block;
+	margin: 0px 5px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 18px;
+	color: #282A2E;
+}
+
+/* 15 Responsive
+----------------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+	.navbar-custom {
+		background-color: #ffffff;
+	}
+	.navbar-custom .navbar-brand {
+		color: #000;
+		padding: 15px;
+	}
+	.work-list li {
+		width: 100%;
+		display: block;
+	}
+}
+
+/* 16 Back-to-top
+----------------------------------------------------------------------------- */
+.back-to-top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    display: none;
+    text-align: center;
+    z-index: 10000;
+}
+.back-to-top i {
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    line-height: 33px;
+}
+
+
+
+
+/*==================================
+STYLE SWITHER - Demo purpose only
+==================================*/ 
+
+#style-switcher div h3 {
+    color: #1D1D1D;
+    font-size: 16px;
+    margin: 8px 3px 12px;
+}
+#style-switcher {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+    left: -189px;
+    position: fixed;
+    top: 17%;
+    width: 189px;
+    z-index: 9999;
+    padding: 10px 5px;
+}
+#style-switcher div {
+    padding: 5px 10px;
+}
+#style-switcher .bottom {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #252525;
+    padding: 0;
+}
+#style-switcher .bottom a.settings {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+    display: block;
+    height: 41px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 40px;
+    padding: 3px;
+}
+#style-switcher .bottom a {
+  text-decoration: none;
+}
+
+#style-switcher .bottom a.settings i {
+    margin-left: 8px;
+    color: gray;
+    font-size: 18px;
+    position: absolute;
+    margin-top: 9px;
+}
+
+ul.pattern {
+    list-style: none outside none;
+    margin: 0 0 0px;
+    overflow: hidden;
+  padding:0;
+  border-radius: 0px;
+}
+ul.pattern li {
+    float: left;
+    margin: 2px;
+}
+ul.pattern li a {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+
+ul.pattern .color1 {
+  background-color: #00bc95;
+}
+ul.pattern .color2 {
+  background-color: #d13a7a;
+}
+ul.pattern .color3 {
+  background-color: #e24348;
+}
+ul.pattern .color4 {
+  background-color: #1aace7;
+}
+ul.pattern .color5 {
+  background-color: #6a5a8c;
+}
+ul.pattern .color6 {
+  background-color: #F94c00;
+}
+ul.pattern .color7 {
+  background-color: #1f7f5c;
+}
+ul.pattern .color8 {
+  background-color: #336699;
+}
+ul.pattern .color9 {
+  background-color: #Fbce43;
+}
+ul.pattern .color10 {
+  background-color: #a06081;
+}
+ul.pattern .color11 {
+  background-color: #737f97;
+}
+ul.pattern .color12 {
+  background-color: #9932cc;
+}
+
+@media only screen and (max-width: 479px) {
+#style-switcher {
+    display: none;
+}
+}

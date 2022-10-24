@@ -1,0 +1,64 @@
+{% extends 'adminhome.html' %}
+{% block content %}
+<section class="contact_section ">
+
+    <div class="container">
+     
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center d-md-block">
+            <h2>
+              ADD PRODUCT
+            </h2>
+          </div>
+          <form action="">
+            <div class="contact_form-container">
+              <div>
+                <div>
+                    <label>Select Category</label>
+                    <select id="catname" name="catname">
+                        <option >--select--</option>
+                  </div>
+                  <div>
+                    <label>Select SubCategory</label>
+                    <select id="subcatname" name="subcatname">
+                        <option >--select--</option>
+                  </div>
+                  <div>
+                    <label>Select Brand</label>
+                    <select id="brname" name="brname">
+                        <option >--select--</option>
+                  </div>
+                <div>
+                  <input type="text"  id="proname" name="proname" placeholder="product name">
+                </div>
+                <div>
+                    <input type="text"  id="prodes" name="prodes" placeholder="product description">
+                  </div>
+                  <div>
+                    <input type="text"  id="proavl" name="proavl" placeholder="product availability">
+                  </div>
+                  <div>
+                    <input type="file"  id="proimg" name="proimg" placeholder="product image">
+                  </div>
+               
+                <div class="mt-5">
+                  <button type="submit">
+                    send
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="contact_img-box">
+            <img src="images/students.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{%endblock%}
